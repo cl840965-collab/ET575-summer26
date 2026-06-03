@@ -73,5 +73,27 @@ int main(){
     cout<<"Index of letter pan = "<<index_r<<endl;
     int never = username.find("NEVER");
     cout<<"Index of NEVER = "<<never<<endl;
+
+    cout<<"\n---- Example 10: combinate methods"<<endl;
+    // add string m in username before 123
+    cout<<username<<endl;
+    cout<<m<<endl;
+    // find the index for 123
+    int index123 = username.find("123");
+    // add value of string m before from index123
+    username.insert(username.find("123"), m);
+    cout<<username<<endl;
+
+    cout<<"\n---- EXCERCISE "<<endl;
+    string new_word = "";
+    cout<<"Enter a word: ";
+    cin>>new_word;
+    cout<<"The 4th character is: "<<new_word[3]<<endl;
+    cout<<"The length of the word is: "<<new_word.length()<<" characters."<<endl;
+    new_word.replace(1, 3, "--$--");
+    cout<<new_word<<endl;
+    int word = new_word.length();
+    new_word.erase(word - 2);
+    cout<<new_word<<endl;
     return 0;
 }
