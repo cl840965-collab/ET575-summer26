@@ -85,6 +85,31 @@ int main(){
 
    // print result
    cout<<wavelength<<" nm emits "<<emittedlight<<" light"<<endl;
-   return 0;
-   
+
+   cout<<"--- EXCERCISE"<<endl;
+   float package = 0;
+   cout<<"Enter the weight of ur package: ";
+   cin>>package;
+   float shipping = 0;
+   if(package<=2 && package >=0){
+    shipping += 5.00;
+    cout<<"A package of weight "<<package<<" costs $"<<shipping<<endl;
+   }
+   else if(package>2 && package<=5){
+    shipping += 8.20;
+    cout<<"A package of weight "<<package<<" costs $"<<shipping<<endl;
+   }
+   else if(package>5 && package<=10){
+    shipping += 10.25;
+    cout<<"A package of weight "<<package<<" costs $"<<shipping<<endl;
+   }
+   else if(package>10){
+    shipping += 12.50;
+    cout<<"A package of weight "<<package<<" costs $"<<shipping<<endl;
+   }
+   else if(package<=0){
+    shipping += 0;
+    cout<<"A package of weight "<<package<<" costs $"<<shipping<<endl;
+   }
+    return 0;
 }
