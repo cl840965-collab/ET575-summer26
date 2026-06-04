@@ -128,7 +128,7 @@ int main(){
     cout<<"negative and odd number"<<endl;
   }
   else{
-    cout>>"zero"<<endl;
+    cout<<"zero"<<endl;
   }
   if(n>0){
     // inner condtional statement
