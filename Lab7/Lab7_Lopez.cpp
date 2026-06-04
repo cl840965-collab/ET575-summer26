@@ -86,6 +86,67 @@ int main(){
    // print result
    cout<<wavelength<<" nm emits "<<emittedlight<<" light"<<endl;
 
+   cout<<"\n ---- Example 5: conditional operator ----"<<endl;
+   // conditonal operator: three operands --> condition ? expression1 (true): exoression 2 (false)
+   /*
+   
+   example3)
+   if (n%2 == 0){
+        cout<<n<<" is an EVEN number"<<endl;
+   }
+   else{
+        cout<<n<<" is an ODD number"<<endl;
+    }
+   */
+  cout<<n<<((n%2==0) ? " is an EVEN number": " is ODD number")<<endl;
+  
+  cout<<"\n ----Example 6: condtional operator"<<endl;
+  // check if n is greater than 10. if n is greater than 10, set the max value to n.
+  int max = 10;
+  bool checkmax = false;
+  // if else
+  if (n>max){checkmax = true;}
+  else{checkmax = false;}
+  // condition  to check if n is greater than max
+  checkmax = n>max ? true : false;
+  // print result
+  cout<<"Is greater than 10? = "<<checkmax<<endl;
+
+  cout<<((n > 10) ? "N is greater than 10" : "N is not greater than 10");
+  cout<<"\n ----Example 7: nested condtional statement"<<endl;
+  // check is a number, n, is postive, negative, or zero
+  if(n>0 && n%2 == 0){
+    cout<<"postive and odd number"<<endl;
+  }
+  else if(n>0 && n%2!=0){
+    cout<<"positive and odd number"<<endl;
+  }
+  else if(n<0 && n%2==0){
+    cout<<"negative and even number"<<endl;
+  }
+  else if(n<0 && n%2!=0){
+    cout<<"negative and odd number"<<endl;
+  }
+  else{
+    cout>>"zero"<<endl;
+  }
+  if(n>0){
+    // inner condtional statement
+    if(n%20==0)
+        cout<<"Positive and even number"<<endl;
+    else
+        cout<<"postive and odd number"<<endl;
+    
+  }
+  else if(n<0){
+    if(n%2==0)
+        cout<<"negative and even number"<<endl;
+    else
+        cout<<"negative and odd number"<<endl;
+  }
+  else{
+    cout<<"zero"<<endl;
+  }
    cout<<"--- EXCERCISE"<<endl;
    float package = 0;
    cout<<"Enter the weight of ur package: ";
