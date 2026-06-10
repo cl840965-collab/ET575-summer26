@@ -79,6 +79,6 @@ int main(){
     bool charactercheck1 = character >= -2;
     bool charactercheck2 = character <= 2;
     bool checkall = charactercheck1 && charactercheck2;
-    cout<<"Is number between -2 and 2: "<<checkall<<endl;6
+    cout<<"Is number between -2 and 2: "<<checkall<<endl;
     return 0;
 }
