@@ -97,8 +97,22 @@ int collectone(){
     return o;
 }
 
-void collectfifteen(int start){
-    for(int i = start; i<=15; i++){
-        cout<<i<<endl;
+void collectfifteen(int what){
+    for(int i = what; i<=15; i++){
+        cout<<i<<" ";
     }
+}
+
+int m3(int huh) {
+    int c = 0;
+    for (int i = huh; i <= 15; i++) {
+        if (i % 3 != 0) {  
+            c++;
+        }
+    }
+    return c;
+}
+
+void cresult(int damn, int things){
+    cout<<"From "<<damn<<" up to 15, there are "<<things<<" number/s that are not multiplied by 3. Where the first blank is the entered number, and the second blank is the returning number from the third function."<<endl;
 }

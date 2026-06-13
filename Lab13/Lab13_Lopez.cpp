@@ -39,9 +39,11 @@ int main(){
     cout<<tripleaddition();
 
     cout<<"\n---EXCERCISE"<<endl;
-    cout<<collectone()<<endl;
     int stuff = collectone();
     collectfifteen(stuff);
+    int result = m3(stuff);
+    cout<<"Not divisible by 3: "<<result<< endl;
+    cresult(stuff, result);
 
     return 0;
 }
