@@ -9,15 +9,6 @@ Lab 16: intro array
 using namespace std;
 
 int main(){
-    // excercise a
-    /*
-    int* ptr;
-    int var = 7;
-    int foo = 21;
-    int* ptr = &var;
-    int* ptr = &foo;
-    int& ref = var;
-    */
 
     // example 1: intro to pointer
     cout<<"\n---- example 1: intro to pointer"<<endl;
@@ -31,6 +22,28 @@ int main(){
     cout<<something<<endl;
     c(&something);
     a(something);
-    return 0;
 
+    cout<<"\n---- example 3: intro to array"<<endl;
+    introarray();
+
+    cout<<"\n---- example 4: print each element in an array"<<endl;
+    const int s = 4;
+    int age[] = {0};
+
+    printelements(s, age);
+    updatearray(s, age);
+    printelements(s, age);
+
+    int c = countadult(s, age);
+    cout<<"Adult 21+ = "<<c<<endl;
+
+    cout<<"\n---EXCERCISE A"<<endl;
+    excercesiea();
+
+    cout<<"\n---EXCERCISE B"<<endl;
+    int yeah[] = {0};
+    excerciseb(10, yeah);
+    int w = count(10, yeah);
+    cout<<"Even number = "<<w<<endl;
+    return 0;
 }
