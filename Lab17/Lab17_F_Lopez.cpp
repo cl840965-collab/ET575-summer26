@@ -68,3 +68,74 @@ void intro2darray(){
     // accessing a value in a 2d array
     cout<<"The temperature in 1st row, 2nd column"<<temperature[0][1]<<endl;
 }
+
+// example 3: print each value in a 2d array
+// the size of the colum HAS to be passed in a 2d array
+// int arr[][3] --> int (*arr)[3]
+void printarray(int arr[][3], int rows){
+    for(int r = 0; r<rows; r++){
+        for(int c = 0; c<3; c++){
+            cout<<arr[r][c]<<"\t";
+        }
+        cout<<endl;
+    }
+}
+
+// example 4: 2d array application
+// function to find and print the average of students grade
+// 2d setip : row --> student, column --> subjects.
+// 2d array of 3 students and 4 subjects per student
+void studentaverage(int (*arr)[4], int sizestudents, int sizesubjects, int *avg){
+    for(int r = 0; r<sizestudents; r++){
+        int sum = 0;
+        int index = 0;
+        for(int c = 0; c<sizestudents; c++){
+            sum += arr[r][c];
+        }
+        //cout<<"Student "<<r+1<<" average grade = "<<(sum/sizesubjects)<<endl;
+        // save the average of each student in a 1d array, avg
+        avg[index] = sum/sizesubjects;
+        
+        cout<<index<<avg[index]<<endl;
+        index++;
+    }
+}
+
+// function to print the average of each student
+void printavg(int *avg, int sizestudents){
+    for(int i=0; i<sizestudents; i++){
+        cout<<"Student "<<i+1<<" average grade = "<<avg[i]<<endl;
+    }
+}
+
+int minnum(int *a, int sizea){
+    int min = a[0];
+    for(int i =0; i<sizea; i++){
+        if(a[i] < min){
+            min = a[i];
+        }
+    }
+
+    return min;
+}
+
+void farray2(int s[][5]){
+    srand(time(0));
+    for(int l = 0; l<5; l++){
+        for(int c = 0; c<5; c++){
+            s[l][c] = 1 + rand()%255;
+        }
+    }
+}
+
+int range(int s[5][5], int min, int max){
+    int count = 0;
+    for(int i =0; i<5; i++){
+        for(int x =0; x<5; x++){
+            if(s[i][x] >= min && s[i][x] <= max){
+                count++;
+            }
+        }
+    }
+    return count;
+}
