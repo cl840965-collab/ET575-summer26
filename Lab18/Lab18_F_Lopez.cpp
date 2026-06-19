@@ -17,7 +17,7 @@ void checknumber(){
     cout<<"END OF FUNCTION"<<endl;
 }
 
-//example 2: validate a data type
+// example 2: validate a data type
 float validatenumber(){
     float n;
     do{
@@ -89,5 +89,59 @@ void appendfile(string filename){
     fout.open(filename, ios::app);
     fout<<"Claudio Lopez"<<endl;
 
+    fout.close();
+}
+
+float valinum(int num1, int num2){
+    char sy;
+    
+    while(true){
+        cout<<"Enter a operation to do: ";
+        cin>>sy;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(10000, '\n');
+            continue;
+        }
+        if (sy == '+' || sy == '-' || sy == '*' || sy == '/' || sy == '%'){
+            break;
+        }
+        cout<<"Try again"<<endl;
+    }
+    if (sy == '+'){
+        return num1 + num2;
+    } 
+    else if (sy == '-'){
+        return num1 - num2;
+    }
+    else if (sy == '*'){
+        return num1 * num2;
+    } 
+    else if (sy == '/'){
+        return num1 / num2;
+    } 
+    else if (sy == '%'){
+        return (int)num1 % (int)num2;
+    }
+
+    return 0;
+}
+
+void write(){
+    ofstream fout;
+    fout.open("data_user.txt");
+    fout<<"This is my output file - Claudio Lopez. \n"<<endl;
+    fout.close();
+}
+void add(string newtext){
+    ofstream fout;
+    fout.open("data_user.txt", ios::app);
+    fout<<newtext<<endl;
+    fout.close();
+}
+void over(string filname, string text){
+    ofstream fout;
+    fout.open(filname);
+    fout<<text<<endl;
     fout.close();
 }

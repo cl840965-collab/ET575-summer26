@@ -25,5 +25,15 @@ int main(){
     cout<<"\n--- example 5: append data to a file"<<endl;
     string filename = "outputfile.txt";
     appendfile(filename);
+
+    cout<<"\n--- excercise A"<<endl;
+    float r = valinum(5, 5);
+    cout<<r<<endl;
+
+    cout<<"\n--- excercise B"<<endl;
+    write();
+    add("Hell no");
+    over("data_user.txt", "Nah bro");
     return 0;
+
 }
